@@ -26,12 +26,12 @@ BOOL SGAnimatedArtworkAvailable(void) {
 }
 
 NSArray<NSString *> *SGAnimatedArtworkKeys(void) {
-    if (@available(iOS 17.0, *)) return MPNowPlayingInfoCenter.supportedAnimatedArtworkKeys;
+    if (@available(iOS 26.0, *)) return MPNowPlayingInfoCenter.supportedAnimatedArtworkKeys;
     return nil;
 }
 
 NSString *SGAnimatedArtworkKey(CGFloat *aspect) {
-    if (@available(iOS 17.0, *)) {
+    if (@available(iOS 26.0, *)) {
         NSArray<NSString *> *supported = SGAnimatedArtworkKeys();
         // A Canvas is taller than either shape, so the tall key loses the least of it.
         if ([supported containsObject:MPNowPlayingInfoProperty3x4AnimatedArtwork]) {
