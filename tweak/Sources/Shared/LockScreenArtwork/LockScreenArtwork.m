@@ -23,7 +23,7 @@ void SGArtworkSetOrder(NSArray<NSString *> *order) {
 
 BOOL SGAnimatedArtworkAvailable(void) {
     if (@available(iOS 17.0, *)) return MPMediaItemAnimatedArtwork.class != nil;
-    return NO;
+    return YES;
 }
 
 NSArray<NSString *> *SGAnimatedArtworkKeys(void) {
